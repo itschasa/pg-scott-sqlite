@@ -1,12 +1,3 @@
-
--- Classical Scott database (EMP, DEPT, SALGRADE) for PostgreSQL
--- See: https://github.com/rsp/pg-scott
-
-
--- DDL - Data Definition Language:
-
-begin;
-
 create table dept (
   deptno integer,
   dname  text,
@@ -45,8 +36,6 @@ create table bonus (
 */
 
 
--- DML - Data Manipulation Language:
-
 insert into dept (deptno,  dname,        loc)
        values    (10,     'ACCOUNTING', 'NEW YORK'),
                  (20,     'RESEARCH',   'DALLAS'),
@@ -75,5 +64,3 @@ insert into emp (empno, ename,    job,        mgr,   hiredate,     sal, comm, de
                 (7900, 'JAMES',  'CLERK',     7698, '1981-12-03',  950, NULL,   30),
                 (7902, 'FORD',   'ANALYST',   7566, '1981-12-03', 3000, NULL,   20),
                 (7934, 'MILLER', 'CLERK',     7782, '1982-01-23', 1300, NULL,   10);
-
-commit;
